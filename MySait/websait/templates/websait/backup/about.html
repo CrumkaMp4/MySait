@@ -1,0 +1,19 @@
+{% extends 'websait/base.html' %}
+
+ {% block title %}
+ About Store
+ {% endblock %}
+
+ {% block content %}
+    <h1>About</h1>
+    {% if person  %}
+        {% for el in person %}
+            <div class="alert alert-warning mt-2">
+                <h3>{{ el.name }}</h3>
+                <p>{{ el.age }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Тут нет записей</p>
+    {% endif %}
+ {% endblock %}
